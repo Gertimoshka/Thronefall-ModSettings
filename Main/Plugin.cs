@@ -10,9 +10,6 @@ namespace ModSettings
     {
         private void Awake()
         {
-            // Plugin startup logic
-            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
-
             string path = Path.Combine(Application.persistentDataPath, "ModSettings/");
             if (!Directory.Exists(path))
             {
@@ -20,6 +17,8 @@ namespace ModSettings
             }
 
             Patches.SettingsUIHelperPatch.Apply();
+
+            Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
         }
     }
 }
