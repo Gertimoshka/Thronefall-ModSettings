@@ -52,7 +52,7 @@ namespace ModSettings
             return null;
         }
 
-        public static bool? GetCheckboxValue(string name, string modId)
+        public static bool GetCheckboxValue(string name, string modId)
         {
             foreach (ModSetting setting in settings)
             {
@@ -63,13 +63,13 @@ namespace ModSettings
                         case SettingTypes.Tick:
                             return ((Tick)setting).GetValue();
                         default:
-                            return null;
+                            return false;
                     }
                 }
             }
-            return null;
+            return false;
         }
-        public static float? GetSliderValue(string name, string modId)
+        public static float GetSliderValue(string name, string modId)
         {
             foreach (ModSetting setting in settings)
             {
@@ -80,11 +80,11 @@ namespace ModSettings
                         case SettingTypes.Slider:
                             return ((Slider)setting).GetValue();
                         default:
-                            return null;
+                            return 0f;
                     }
                 }
             }
-            return null;
+            return 0f;
         }
 
         public static void SaveSetting(string name, string modId, object value)
