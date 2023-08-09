@@ -27,5 +27,5 @@ Getting Checkbox Value will return a bool based on state.
 ModSettings.CreateSlider("<SettingName>", "<modID>", "<displayName>", 0f, 1f, 0.1f, 1f);
 float value = ModSettings.GetSliderValue("<SettingName>", "<modID>");
 ```
-This will create a slider that can have <minValue>, <maxValue>, <valueIncrements>, <defaultValue>
+This will create a slider that can have minValue, maxValue, valueIncrements, defaultValue
 Getting Slider Value will return a float based on current number, note if value is changed in settings to a number outside the range it will snap back into range, and will round to nearest increment
