@@ -29,6 +29,7 @@ namespace ModSettings.Patches
 
             newTab.parentElement = tabParent.GetComponent<TFUITextButton>();
             newTab.childContainer = tabChild.GetComponent<VerticalLayoutGroup>();
+            newTab.contentParent = tabChild;
 
             Tabs.Add(newTab.parentElement, newTab);
             newTab.childContainer.gameObject.SetActive(false);
